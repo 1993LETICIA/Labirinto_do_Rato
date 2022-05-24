@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #define MAX 15
 
-void criaLab(char l[MAX][MAX]){
+void cria(char l[MAX][MAX]){
      int i,j,x,y;
      srand(time(NULL));
      for(i=0;i<MAX;i++)
@@ -24,7 +24,7 @@ void criaLab(char l[MAX][MAX]){
         l[x][y]='Q';
      }// fim funcao cria
      
-void printLab(char mat[MAX][MAX],int linha,int col){
+void MostrarLabirinto(char mat[MAX][MAX],int linha,int col){
     int i,j;
      for ( i = 0; i < linha; i++)
     {
@@ -35,7 +35,7 @@ void printLab(char mat[MAX][MAX],int linha,int col){
 
      } // fim funcao
      
- int findQ(char lab[MAX][MAX],int i, int j){
+ int SuperMouse(char lab[MAX][MAX],int i, int j){
      tpilha p1,p2;
      inicializa(&p1); 
      inicializa(&p2); 
@@ -82,10 +82,10 @@ void printLab(char mat[MAX][MAX],int linha,int col){
 int main(){
     char mouseLab[MAX][MAX];
     int x,y;
-    criaLab(mouseLab);
-    printLab(mouseLab,MAX,MAX);
+    cria(mouseLab);
+    MostrarLabirinto(mouseLab,MAX,MAX);
     printf("\nPosicao inicial do rato :=:");
     scanf("%d %d",&x,&y);
-    findQ(mouseLab,x,y);
+    SuperMouse(mouseLab,x,y);
     getch();
     }
