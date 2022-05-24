@@ -71,7 +71,7 @@ void MostrarLabirinto(char mat[MAX][MAX],int linha,int col){
 				  
 		  Sleep(180);
 		  system("cls");
-		  printLab(lab,MAX,MAX);   
+		  MostrarLabirinto(lab,MAX,MAX);   
 	 }while(lab[i][j]!='Q');
 	 if (lab[i][j] == 'Q')
 	printf("\n\nQueijo encontrado na posicao [%d] [%d]", i,j);
